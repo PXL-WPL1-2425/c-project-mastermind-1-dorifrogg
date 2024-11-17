@@ -5,45 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mastermind"
         mc:Ignorable="d"
-        Title="MasterMind" Height="450" Width="800">
+        Title="MasterMind" Height="450" Width="800"
+        Background= "LightGray">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="53*"/>
             <ColumnDefinition Width="748*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.ColumnSpan="2">
-            <ComboBoxItem Content="Blue"></ComboBoxItem>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.ColumnSpan="2" SelectionChanged="comboBox1_SelectionChanged">
             <ComboBoxItem Content="Red"></ComboBoxItem>
-            <ComboBoxItem Content="Green"></ComboBoxItem>
             <ComboBoxItem Content="Yellow"></ComboBoxItem>
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
+            <ComboBoxItem Content="Green"></ComboBoxItem>
+            <ComboBoxItem Content="Blue"></ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
-            <ComboBoxItem Content="Blue"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1" SelectionChanged="comboBox2_SelectionChanged">
             <ComboBoxItem Content="Red"/>
-            <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
-        </ComboBox>
-        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
-            <ComboBoxItem Content="Blue"/>
-            <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1" SelectionChanged="comboBox3_SelectionChanged">
+            <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
-        </ComboBox>
-        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
-            <ComboBoxItem Content="Blue"/>
-            <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1" SelectionChanged="comboBox4_SelectionChanged">
+            <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
         </ComboBox>
         <Button x:Name="checkButton" Content="Check Code" HorizontalAlignment="Left" Margin="502,11,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
+        <Label x:Name="colour1Label" Content="" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="120" Height="96" IsEnabled="False"/>
+        <Label x:Name="colour2Label" Content="" HorizontalAlignment="Left" Margin="82,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
+        <Label x:Name="colour3Label" Content="" HorizontalAlignment="Left" Margin="208,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
+        <Label x:Name="colour4Label" Content="" HorizontalAlignment="Left" Margin="332,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
 
     </Grid>
 </Window>
