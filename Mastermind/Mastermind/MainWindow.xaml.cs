@@ -28,7 +28,7 @@ namespace Mastermind
         }
 
         //METHODS
-        public void GenerateColours(out string colourSlot1, out string colourSlot2, out string colourSlot3, out string colourSlot4)
+        private void GenerateColours(out string colourSlot1, out string colourSlot2, out string colourSlot3, out string colourSlot4)
         {
             Random rng = new Random();
             List<string> colourList = new List<string>();
@@ -66,8 +66,43 @@ namespace Mastermind
             colourSlot3 = colourList[2];
             colourSlot4 = colourList[3];
         }
-
-
+        private void GenerateBackgrounds(Label label1, Label label2, Label label3, Label label4, out List<string> stringList)
+        {
+            List<string> colourList = new List<string>();
+            colourList.Add(label1.Background.ToString());
+            colourList.Add(label2.Background.ToString());
+            colourList.Add(label3.Background.ToString());
+            colourList.Add(label4.Background.ToString());
+            stringList = new List<string>();
+            for(int i=0; i<4; i++)
+            {
+                switch (colourList[i])
+                {
+                    case "#FFFF0000":
+                        stringList.Add("Red");
+                        break;
+                    case "#FFFFFF00":
+                        stringList.Add("Yellow");
+                        break;
+                    case "#FFFFA500":
+                        stringList.Add("Orange");
+                        break;
+                    case "#FFFFFFFF":
+                        stringList.Add("White");
+                        break;
+                    case "#FF008000":
+                        stringList.Add("Green");
+                        break;
+                    case "#FF0000FF":
+                        stringList.Add("Blue");
+                        break;
+                    default:
+                        stringList.Add("Invalid");
+                        break;
+                }
+            }
+        }
+             
         //EVENT METHODS
         private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -176,6 +211,85 @@ namespace Mastermind
                         break;
                     case 5:
                         colour4Label.Background = Brushes.Blue;
+                        break;
+                }
+            }
+        }
+
+        private void checkButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> colourList = new List<string>();
+            colourList.Add(colour1);
+            colourList.Add(colour2);
+            colourList.Add(colour3);
+            colourList.Add(colour4);
+            List<string> backgroundList = new List<string>();
+            GenerateBackgrounds(colour1Label, colour2Label, colour3Label, colour4Label, out backgroundList);
+            if (backgroundList.Contains("Invalid"))
+            {
+                MessageBox.Show("At least one of the combo boxes is empty, try again.");
+                return;
+            }
+            List<string> borderList = new List<string>();
+            for (int i=0; i<4; i++)
+            {
+                if (backgroundList[i] == colourList[i])
+                {
+                    borderList.Add("DarkRed");
+                }
+                else if (colourList.Contains(backgroundList[i]))
+                {
+                    borderList.Add("Wheat");
+                }
+                else borderList.Add("None");
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        if (borderList[i] == "DarkRed")
+                        {
+                            colour1Label.BorderBrush = Brushes.DarkRed;
+                        }
+                        else if (borderList[i] == "Wheat")
+                        {
+                            colour1Label.BorderBrush = Brushes.Wheat;
+                        }
+                        else colour1Label.BorderBrush = Brushes.Transparent;
+                        break;
+                    case 1:
+                        if (borderList[i] == "DarkRed")
+                        {
+                            colour2Label.BorderBrush = Brushes.DarkRed;
+                        }
+                        else if (borderList[i] == "Wheat")
+                        {
+                            colour2Label.BorderBrush = Brushes.Wheat;
+                        }
+                        else colour2Label.BorderBrush = Brushes.Transparent;
+                        break;
+                    case 2:
+                        if (borderList[i] == "DarkRed")
+                        {
+                            colour3Label.BorderBrush = Brushes.DarkRed;
+                        }
+                        else if (borderList[i] == "Wheat")
+                        {
+                            colour3Label.BorderBrush = Brushes.Wheat;
+                        }
+                        else colour3Label.BorderBrush = Brushes.Transparent;
+                        break;
+                    case 3:
+                        if (borderList[i] == "DarkRed")
+                        {
+                            colour4Label.BorderBrush = Brushes.DarkRed;
+                        }
+                        else if (borderList[i] == "Wheat")
+                        {
+                            colour4Label.BorderBrush = Brushes.Wheat;
+                        }
+                        else colour4Label.BorderBrush = Brushes.Transparent;
                         break;
                 }
             }

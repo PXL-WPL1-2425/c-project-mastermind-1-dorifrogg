@@ -44,11 +44,11 @@
             <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="Blue"/>
         </ComboBox>
-        <Button x:Name="checkButton" Content="Check Code" HorizontalAlignment="Left" Margin="502,11,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
-        <Label x:Name="colour1Label" Content="" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="120" Height="96" IsEnabled="False"/>
-        <Label x:Name="colour2Label" Content="" HorizontalAlignment="Left" Margin="82,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
-        <Label x:Name="colour3Label" Content="" HorizontalAlignment="Left" Margin="208,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
-        <Label x:Name="colour4Label" Content="" HorizontalAlignment="Left" Margin="332,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False"/>
+        <Button x:Name="checkButton" Content="Check Code" HorizontalAlignment="Left" Margin="502,11,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" Click="checkButton_Click"/>
+        <Label x:Name="colour1Label" Content="" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="120" Height="96" IsEnabled="False" BorderThickness="5px"/>
+        <Label x:Name="colour2Label" Content="" HorizontalAlignment="Left" Margin="82,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False" BorderThickness="5px"/>
+        <Label x:Name="colour3Label" Content="" HorizontalAlignment="Left" Margin="208,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False" BorderThickness="5px"/>
+        <Label x:Name="colour4Label" Content="" HorizontalAlignment="Left" Margin="332,47,0,0" VerticalAlignment="Top" Width="120" Height="96" Grid.Column="1" IsEnabled="False" BorderThickness="5px"/>
 
     </Grid>
 </Window>
