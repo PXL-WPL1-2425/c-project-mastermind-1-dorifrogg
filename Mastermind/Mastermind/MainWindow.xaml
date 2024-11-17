@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MasterMind" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="748*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.ColumnSpan="2">
             <ComboBoxItem Content="Blue"></ComboBoxItem>
             <ComboBoxItem Content="Red"></ComboBoxItem>
             <ComboBoxItem Content="Green"></ComboBoxItem>
@@ -15,7 +19,7 @@
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True">
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Green"/>
@@ -23,7 +27,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True">
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Green"/>
@@ -31,7 +35,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="385,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True">
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="1">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Green"/>
@@ -39,7 +43,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <Button x:Name="checkButton" Content="Check Code" HorizontalAlignment="Left" Margin="555,11,0,0" VerticalAlignment="Top" Width="174"/>
+        <Button x:Name="checkButton" Content="Check Code" HorizontalAlignment="Left" Margin="502,11,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
 
     </Grid>
 </Window>
