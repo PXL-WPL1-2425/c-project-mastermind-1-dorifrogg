@@ -19,6 +19,8 @@ namespace Mastermind
         public MainWindow()
         {
             InitializeComponent();
+            int nummer1;
+            nummer1 = GenerateColour();
         }
 
         public int GenerateColour()
@@ -26,6 +28,5 @@ namespace Mastermind
             Random rng = new Random();
             return rng.Next(1, 7);
         }
-
     }
 }
